@@ -22,10 +22,11 @@ abstract class AppDecorations {
           side: border ?? BorderSide.none,
         ),
       ),
-    
       fixedSize: MaterialStatePropertyAll(size),
-      backgroundColor: MaterialStateProperty.all(bgColor ?? AppColors.accentColor),
-      overlayColor: MaterialStateProperty.all(overlayColor ?? AppColors.black),
+      backgroundColor:
+          MaterialStateProperty.all(bgColor ?? AppColors.accentColor),
+      overlayColor: MaterialStateProperty.all(
+          overlayColor ?? AppColors.accentColor.withOpacity(.2)),
       padding: MaterialStateProperty.all(padding),
     );
   }

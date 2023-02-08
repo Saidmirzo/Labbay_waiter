@@ -47,6 +47,13 @@ abstract class AppTextStyles {
       fontStyle: FontStyle.normal,
       fontSize: 36.sp,
       color: AppColors.black);
+    static TextStyle head38w5 = TextStyle(
+      fontFamily: fontFamily,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+      fontSize: 38.sp,
+      color: AppColors.black);
+
 
   static TextStyle head25w5 = TextStyle(
       fontFamily: fontFamily,
