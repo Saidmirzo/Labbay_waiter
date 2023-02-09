@@ -40,6 +40,17 @@ class _Icons extends _AssetsHolder {
 
   String get message => "$basePath/message.svg";
 
+  String get search => "$basePath/ic_search.svg";
+
+  String get lock => "$basePath/ic_lock.svg";
+
+  String get lockBlack => "$basePath/ic_lock_black.svg";
+
+  String get arrowLeft2 => "$basePath/ic_arrow_left.svg";
+
+  String get star => "$basePath/ic_star.svg";
+  
+  String get shoppingCart => "$basePath/ic_shopping_cart.svg";
  
   
 }
@@ -55,6 +66,13 @@ class _Images extends _AssetsHolder {
 
   String get palov => "$basePath/img_palov.png";
 
+  String get regBg => '$basePath/reg_bg.png';
+
+  String get chairs => '$basePath/chairs.png';
+
+  String get osh => '$basePath/osh.png';
+
+  String get ichimlik => '$basePath/ichimlik.png';
 
   
 }

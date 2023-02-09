@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:labbay_waiter/config/constants/app_colors.dart';
 
 import 'presentation/routes/routes.dart';
 
@@ -18,7 +19,9 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) {
         return MaterialApp(
-          theme: ThemeData(useMaterial3: true),
+          theme: ThemeData(
+              useMaterial3: true,
+              scaffoldBackgroundColor: AppColors.accentColor),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: (settings) => Routes.generateRoute(settings),
         );
