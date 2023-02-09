@@ -7,6 +7,7 @@ import 'package:labbay_waiter/config/constants/app_colors.dart';
 import 'package:labbay_waiter/config/constants/app_decorations.dart';
 import 'package:labbay_waiter/config/constants/app_text_styles.dart';
 import 'package:labbay_waiter/config/constants/assets.dart';
+import 'package:labbay_waiter/presentation/pages/page12/view/food_about_message.dart';
 
 class PinCodePage extends StatelessWidget {
   const PinCodePage({super.key});
@@ -87,7 +88,10 @@ class PinCodePage extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        log('message');
+                        showDialog(
+                          context: context,
+                          builder: (context) => FoodAboutMessage(),
+                        );
                       },
                       child: Image.asset(
                         Assets.icons.fingerScan,

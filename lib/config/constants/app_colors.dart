@@ -11,6 +11,8 @@ abstract class AppColors {
   static  Color hintColor = const Color(0xff3B3B3B);
   static  Color buttonColor = const Color(0xff15BE77);
   static  Color borderColor = const Color(0xff9FEDC2);
+  static  Color backButtonColor = const Color(0xffD1FFE2);
+  static  Color messageButtonBg = const Color(0xffE8F9F2);
   static  Color shadowColor = const Color(0xff5AEAB6).withOpacity(.2);
   
   

@@ -36,6 +36,10 @@ class _Icons extends _AssetsHolder {
 
   String get arrowLeft => "$basePath/arrow_left.svg";
 
+  String get arrowCancel => "$basePath/arrow_cancel.svg";
+
+  String get message => "$basePath/message.svg";
+
  
   
 }
@@ -48,6 +52,8 @@ class _Images extends _AssetsHolder {
   String get loginBg => "$basePath/login_bg.png";
 
   String get pinCodeBg => "$basePath/pin_code_bg.png";
+
+  String get palov => "$basePath/img_palov.png";
 
 
   

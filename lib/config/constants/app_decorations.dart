@@ -26,7 +26,8 @@ abstract class AppDecorations {
       backgroundColor:
           MaterialStateProperty.all(bgColor ?? AppColors.accentColor),
       overlayColor: MaterialStateProperty.all(
-          overlayColor ?? AppColors.accentColor.withOpacity(.2)),
+        overlayColor ?? AppColors.accentColor.withOpacity(.2),
+      ),
       padding: MaterialStateProperty.all(padding),
     );
   }
