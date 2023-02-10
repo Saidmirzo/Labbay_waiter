@@ -7,6 +7,7 @@ import 'package:labbay_waiter/config/constants/app_colors.dart';
 import 'package:labbay_waiter/config/constants/app_decorations.dart';
 import 'package:labbay_waiter/config/constants/app_text_styles.dart';
 import 'package:labbay_waiter/config/constants/assets.dart';
+import 'package:labbay_waiter/presentation/routes/routes.dart';
 
 import '../components/custom_text_field.dart';
 
@@ -45,7 +46,7 @@ class LoginPage extends StatelessWidget {
             ),
             SizedBox(height: 26.h),
             TextButton(
-              onPressed: () {},
+              onPressed: () =>Navigator.pushReplacementNamed(context, Routes.pinCodePage),
               style: AppDecorations.buttonStyle(
                 bgColor: AppColors.buttonColor,
                 borderRadius: 15,

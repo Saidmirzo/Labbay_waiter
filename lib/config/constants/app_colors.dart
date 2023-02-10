@@ -24,6 +24,7 @@ abstract class AppColors {
   static const Color red =  Color(0xffF63C3C);
 
   static  Color shadowColor2 = const  Color(0xff5A6CEA).withOpacity(.1);
+  static  Color shadowColor3 = const  Color(0xff5A6CEA).withOpacity(.07);
   static  Color shadowColor = const Color(0xff5AEAB6).withOpacity(.2);
   
   

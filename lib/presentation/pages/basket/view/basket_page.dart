@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -7,7 +9,8 @@ import 'package:labbay_waiter/config/constants/app_text_styles.dart';
 import 'package:labbay_waiter/config/constants/assets.dart';
 import 'package:labbay_waiter/config/constants/local_data.dart';
 import 'package:labbay_waiter/presentation/components/food_item_list_tile.dart';
-import 'package:labbay_waiter/presentation/pages/page12/components/custom_confirmation_page.dart';
+import 'package:labbay_waiter/presentation/pages/basket/components/addition_cost_dialog.dart';
+import 'package:labbay_waiter/presentation/pages/food_items/page12/components/custom_confirmation_page.dart';
 
 import '../../../components/food_sections_appbar.dart';
 
@@ -267,7 +270,7 @@ class _BasketPageState extends State<BasketPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          CutomConfirmationButton(
+                          CustomConfirmationButton(
                             text: 'Yuborish',
                             onTap: () {},
                             bgColor: AppColors.darkYellow,
@@ -275,9 +278,21 @@ class _BasketPageState extends State<BasketPage> {
                             size: Size(164.w, 57.h),
                           ),
                           SizedBox(width: 12.w),
-                          CutomConfirmationButton(
+                          CustomConfirmationButton(
                             text: 'Yakunlash',
-                            onTap: () {},
+                            onTap: () {
+                              showDialog(
+                                context: context,
+                                barrierColor: AppColors.green.withOpacity(.4),
+                                builder: (context) => BackdropFilter(
+                                  filter:
+                                      ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+                                  child: const Center(
+                                    child: AdditionCostDialog(),
+                                  ),
+                                ),
+                              );
+                            },
                             bgColor: AppColors.red,
                             textColor: AppColors.accentColor,
                             size: Size(164.w, 57.h),

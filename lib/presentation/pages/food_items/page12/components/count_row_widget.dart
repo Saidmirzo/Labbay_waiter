@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:labbay_waiter/presentation/pages/page12/components/plus_minus_button.dart';
+import 'package:labbay_waiter/presentation/pages/food_items/page12/components/plus_minus_button.dart';
 
-import '../../../../config/constants/app_text_styles.dart';
+import '../../../../../config/constants/app_text_styles.dart';
 
 class CountRowWidget extends StatefulWidget {
   const CountRowWidget({

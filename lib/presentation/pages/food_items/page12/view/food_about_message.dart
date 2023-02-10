@@ -98,9 +98,9 @@ class FoodAboutMessage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CutomConfirmationButton(text: 'Qaytish', onTap: () {}),
+                    CustomConfirmationButton(text: 'Qaytish', onTap: () {}),
                     SizedBox(width: 12.w),
-                    CutomConfirmationButton(
+                    CustomConfirmationButton(
                       text: 'Yakunlash',
                       onTap: () {},
                       bgColor: AppColors.buttonColor,

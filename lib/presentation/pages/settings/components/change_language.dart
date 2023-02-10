@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../config/constants/app_colors.dart';
 import '../../../../config/constants/app_text_styles.dart';
 import '../../../../config/constants/assets.dart';
-import '../../page12/components/custom_confirmation_page.dart';
+import '../../food_items/page12/components/custom_confirmation_page.dart';
 
 class ChangeLanguage extends StatelessWidget {
   const ChangeLanguage({
@@ -46,7 +46,8 @@ class ChangeLanguage extends StatelessWidget {
               children: [
                 Text(
                   "O'zbek tili",
-                  style: AppTextStyles.body14w5.copyWith(color: AppColors.accentColor),
+                  style: AppTextStyles.body14w5
+                      .copyWith(color: AppColors.accentColor),
                 ),
                 SvgPicture.asset(Assets.icons.checkbox),
               ],
@@ -71,12 +72,12 @@ class ChangeLanguage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CutomConfirmationButton(
+              CustomConfirmationButton(
                 onTap: () => Navigator.pop(context),
                 text: 'Qaytish',
                 size: Size(142.w, 57.h),
               ),
-              CutomConfirmationButton(
+              CustomConfirmationButton(
                 onTap: () {},
                 text: 'Saqlash',
                 bgColor: AppColors.green,

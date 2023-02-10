@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:labbay_waiter/config/constants/app_text_styles.dart';
 
-import '../../../../config/constants/app_colors.dart';
-import '../../../../config/constants/assets.dart';
+import '../../../../../config/constants/app_colors.dart';
+import '../../../../../config/constants/assets.dart';
 import 'custom_text_button.dart';
 
 class CommentRow extends StatefulWidget {

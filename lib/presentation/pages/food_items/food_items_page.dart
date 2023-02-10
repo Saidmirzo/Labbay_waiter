@@ -9,8 +9,7 @@ import '../../../config/constants/local_data.dart';
 import '../../components/food_item_list_tile.dart';
 import '../../components/food_section_sliver_appbar.dart';
 import '../../components/food_sections_appbar.dart';
-import '../../routes/routes.dart';
-import '../page12/view/food_about_message.dart';
+import 'page12/view/food_about_message.dart';
 
 class FoodItemsPage extends StatefulWidget {
   const FoodItemsPage({super.key});

@@ -9,20 +9,17 @@ import '../pages/favorite_foods/favorite_foods_page.dart';
 import '../pages/food_items/food_items_page.dart';
 import '../pages/food_sections/food_sections_page.dart';
 import '../pages/home/home_page.dart';
-import '../pages/main/view/main_page.dart';
 
 class Routes {
-  static const mainPage = '/mainPage';
-  static const landingPage = '/landingPage';
+  static const landingPage = '/';
   static const loginPage = '/loginPage';
   static const pinCodePage = '/pinCodePage';
 
-   static const homePage = '/homePage';
-   static const foodSectionsPage = '/foodSectionsPage';
+  static const homePage = '/homePage';
+  static const foodSectionsPage = '/foodSectionsPage';
   static const foodItemsPage = '/foodItemsPage';
   static const favoriteFoodsPage = '/favoriteFoodsPage';
-  static const settingsPage = '/';
-
+  static const settingsPage = '/settingsPage';
   static const basketPage = '/basketPage';
   static Route<dynamic> generateRoute(RouteSettings routeSettings) {
     try {
@@ -30,11 +27,7 @@ class Routes {
           routeSettings.arguments as Map<String, dynamic>?;
       args ?? <String, dynamic>{};
       switch (routeSettings.name) {
-        case mainPage:
-          return MaterialPageRoute(
-            settings: routeSettings,
-            builder: (_) => const MainPage(),
-          );
+       
         case landingPage:
           return MaterialPageRoute(
             settings: routeSettings,
@@ -71,7 +64,7 @@ class Routes {
             settings: routeSettings,
             builder: (_) => const FavoriteFoodsPage(),
           );
-        
+
         case settingsPage:
           return MaterialPageRoute(
             settings: routeSettings,
@@ -85,13 +78,13 @@ class Routes {
         default:
           return MaterialPageRoute(
             settings: routeSettings,
-            builder: (_) => const MainPage(),
+            builder: (_) => const HomePage(),
           );
       }
     } catch (e) {
       return MaterialPageRoute(
         settings: routeSettings,
-        builder: (_) => const MainPage(),
+        builder: (_) => const HomePage(),
       );
     }
   }

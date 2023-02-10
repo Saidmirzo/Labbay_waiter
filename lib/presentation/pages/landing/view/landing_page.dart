@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:labbay_waiter/config/constants/app_colors.dart';
 import 'package:labbay_waiter/config/constants/app_decorations.dart';
 import 'package:labbay_waiter/config/constants/app_text_styles.dart';
+import 'package:labbay_waiter/presentation/routes/routes.dart';
 
 import '../../../../config/constants/assets.dart';
 
@@ -30,7 +31,7 @@ class LandingPage extends StatelessWidget {
             ),
             const Spacer(),
             TextButton(
-              onPressed: () {},
+              onPressed: () =>Navigator.pushReplacementNamed(context, Routes.loginPage),
               style: AppDecorations.buttonStyle(
                 bgColor: AppColors.buttonColor,
                 borderRadius: 15.r,
