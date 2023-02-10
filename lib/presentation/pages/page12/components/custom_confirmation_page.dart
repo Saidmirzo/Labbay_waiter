@@ -11,12 +11,14 @@ class CutomConfirmationButton extends StatelessWidget {
     required this.text,
     this.bgColor,
     required this.onTap,
-    this.textColor, this.size,
+    this.textColor,
+    this.size,
   });
   final String text;
   final Color? bgColor;
   final Color? textColor;
   final Function() onTap;
+  final Size? size;
   final Size? size;
 
   @override
@@ -30,8 +32,7 @@ class CutomConfirmationButton extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: AppTextStyles.body16w5
-            .copyWith(color: textColor ?? AppColors.black),
+        style: AppTextStyles.body16w5.copyWith(color: textColor ?? AppColors.black),
       ),
     );
   }
