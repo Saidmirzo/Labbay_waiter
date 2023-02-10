@@ -1,4 +1,3 @@
-
 import '../../data/models/food_section_model.dart';
 import 'assets.dart';
 
@@ -63,4 +62,15 @@ List<FoodSectionModel> foodSectionsList = [
     sectionName: "Ichimlik",
     foodAmount: "14 ichimlik",
   ),
+];
+
+List<BasketModel> listBasketItems = [
+  BasketModel(title: 'Palov (Qo’y go’shti)', cost: 17000, count: 2, path: Assets.images.osh),
+  BasketModel(title: 'Palov (Qo’y go’shti)', cost: 17000, count: 2, path: Assets.images.osh),
+  BasketModel(title: 'Palov (Qo’y go’shti)', cost: 17000, count: 2, path: Assets.images.osh),
+  BasketModel(title: 'Palov (Qo’y go’shti)', cost: 17000, count: 2, path: Assets.images.osh),
+  BasketModel(title: 'Palov (Qo’y go’shti)', cost: 17000, count: 2, path: Assets.images.osh),
+  BasketModel(title: 'Palov (Qo’y go’shti)', cost: 17000, count: 2, path: Assets.images.osh),
+  BasketModel(title: 'Palov (Qo’y go’shti)', cost: 17000, count: 2, path: Assets.images.osh),
+  BasketModel(title: 'Palov (Qo’y go’shti)', cost: 17000, count: 2, path: Assets.images.osh),
 ];

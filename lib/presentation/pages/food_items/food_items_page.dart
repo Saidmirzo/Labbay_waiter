@@ -10,6 +10,7 @@ import '../../components/food_item_list_tile.dart';
 import '../../components/food_section_sliver_appbar.dart';
 import '../../components/food_sections_appbar.dart';
 import '../../routes/routes.dart';
+import '../page12/view/food_about_message.dart';
 
 class FoodItemsPage extends StatefulWidget {
   const FoodItemsPage({super.key});
@@ -59,7 +60,12 @@ class _FoodItemsPageState extends State<FoodItemsPage> {
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return FoodItemListTile(
-                    onTap: () => Navigator.pushNamed(context, Routes.favoriteFoodsPage),
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) => const FoodAboutMessage(),
+                      );
+                    },
                     trailing: index.isEven
                         ? SvgPicture.asset(
                             Assets.icons.star,
@@ -68,7 +74,8 @@ class _FoodItemsPageState extends State<FoodItemsPage> {
                         : null,
                   );
                 },
-                separatorBuilder: (BuildContext context, int index) => SizedBox(height: 12.h),
+                separatorBuilder: (BuildContext context, int index) =>
+                    SizedBox(height: 12.h),
               ),
             ),
           ],

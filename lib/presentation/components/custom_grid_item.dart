@@ -64,7 +64,7 @@ class CustomGridItem extends StatelessWidget {
               subtitle,
               style: AppTextStyles.body13w5.copyWith(
                 color: blocked
-                    ? AppColors.red.withOpacity(.7)
+                    ? AppColors.darkRed.withOpacity(.7)
                     : booked
                         ? AppColors.orange.withOpacity(.7)
                         : AppColors.green,

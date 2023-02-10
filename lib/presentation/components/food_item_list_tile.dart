@@ -13,12 +13,18 @@ class FoodItemListTile extends StatelessWidget {
     this.trailing,
     this.subtitleColor,
     required this.onTap,
+    this.title,
+    this.path,
+    this.cost,
   });
 
   final Color? bgColor;
   final Widget? trailing;
   final Color? subtitleColor;
   final Function() onTap;
+  final String? title;
+  final String? path;
+  final int? cost;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +36,7 @@ class FoodItemListTile extends StatelessWidget {
         width: double.maxFinite,
         padding: EdgeInsets.only(left: 13.w, right: 20.w),
         decoration: BoxDecoration(
-          color: bgColor ?? AppColors.green.withOpacity(.1),
+          color: bgColor ?? AppColors.messageButtonBg,
           borderRadius: BorderRadius.circular(22.r),
         ),
         child: Row(
@@ -39,14 +45,15 @@ class FoodItemListTile extends StatelessWidget {
               width: 62.w,
               height: 41.h,
               margin: EdgeInsets.only(right: 18.w),
-              child: Image.asset(Assets.images.osh),
+              child: Image.asset(path ?? Assets.images.osh),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Palov (Qo'y go'shti)", style: AppTextStyles.body16w5),
-                Text("17 000 so'm",
+                Text(title ?? "Palov (Qo'y go'shti)",
+                    style: AppTextStyles.body16w5),
+                Text("${cost ?? '17 000'} so'm",
                     style: AppTextStyles.body13w5.copyWith(
                       color: subtitleColor ?? AppColors.green.withOpacity(.7),
                     )),

@@ -10,15 +10,20 @@ abstract class AppColors {
   static const Color freePlaceGrid = Color(0xFFE8F9F2);
   static const Color pink = Color(0xFFFFE0E0);
   static const Color yellow = Color(0xFFFFFBD7);
-  static const Color red = Color(0xFFBE1515);
+  static const Color darkRed = Color(0xFFBE1515);
   static const Color orange = Color(0xFFBE7A15);
-  static const  Color textColor1 =  Color(0xff6BDAA5);
+  static const Color textColor1 =  Color(0xff6BDAA5);
   static const Color hintColor =  Color(0xff3B3B3B);
   static const Color buttonColor =  Color(0xff15BE77);
   static const Color borderColor =  Color(0xff9FEDC2);
   static const Color backButtonColor =  Color(0xffD1FFE2);
   static const Color messageButtonBg =  Color(0xffE8F9F2);
-  
+  static const Color basketBgColor =  Color(0xffFBFBFB);
+  static const Color dottedColor =  Color(0xffF0F1FF);
+  static const Color darkYellow =  Color(0xffFFE175);
+  static const Color red =  Color(0xffF63C3C);
+
+  static  Color shadowColor2 = const  Color(0xff5A6CEA).withOpacity(.1);
   static  Color shadowColor = const Color(0xff5AEAB6).withOpacity(.2);
   
   

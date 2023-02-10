@@ -88,10 +88,7 @@ class PinCodePage extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) => FoodAboutMessage(),
-                        );
+                        
                       },
                       child: Image.asset(
                         Assets.icons.fingerScan,
