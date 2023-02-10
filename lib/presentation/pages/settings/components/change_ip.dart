@@ -38,12 +38,12 @@ class ChangeIp extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CutomConfirmationPage(
+              CutomConfirmationButton(
                 onTap: () => Navigator.pop(context),
                 text: 'Qaytish',
                 size: Size(142.w, 57.h),
               ),
-              CutomConfirmationPage(
+              CutomConfirmationButton(
                 onTap: () {},
                 text: 'Saqlash',
                 bgColor: AppColors.green,

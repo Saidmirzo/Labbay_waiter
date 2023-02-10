@@ -19,7 +19,6 @@ class CutomConfirmationButton extends StatelessWidget {
   final Color? textColor;
   final Function() onTap;
   final Size? size;
-  final Size? size;
 
   @override
   Widget build(BuildContext context) {
