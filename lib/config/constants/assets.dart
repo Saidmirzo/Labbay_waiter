@@ -63,6 +63,8 @@ class _Icons extends _AssetsHolder {
   String get monitorMobile => "$basePath/ic_monitor_mobile.svg";
 
   String get infoCircle => "$basePath/ic_info_circle.svg";
+
+  String get checkbox => "$basePath/ic_checkbox.svg";
  
   
 }

@@ -2,11 +2,24 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:labbay_waiter/config/constants/app_colors.dart';
 import 'package:labbay_waiter/config/constants/app_text_styles.dart';
 import 'package:labbay_waiter/config/constants/assets.dart';
-import 'package:labbay_waiter/presentation/components/splash_button.dart';
+
+import 'components/change_info.dart';
+import 'components/change_ip.dart';
+import 'components/change_language.dart';
+import 'components/change_password.dart';
+import 'components/settings_appbar.dart';
+import 'components/settings_item.dart';
+
+enum SettingsEnum {
+  changePassword,
+  changeInfo,
+  chamgeIP,
+  changeLanguage,
+  about,
+}
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -17,6 +30,38 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> {
   String username = "Jakhongir Sagatov";
+
+  void _showDialog(SettingsEnum item) {
+    showDialog(
+      context: context,
+      barrierColor: AppColors.green.withOpacity(.4),
+      builder: (context) => BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+        child: Center(
+          child: Material(
+            color: Colors.transparent,
+            child: switcher(item),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget switcher(SettingsEnum item) {
+    switch (item) {
+      case SettingsEnum.changePassword:
+        return const ChangePassword();
+      case SettingsEnum.changeInfo:
+        return const ChangeInfo();
+      case SettingsEnum.chamgeIP:
+        return const ChangeIp();
+      case SettingsEnum.changeLanguage:
+        return const ChangeLanguage();
+      default:
+        return const ChangePassword();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,27 +85,27 @@ class _SettingsPageState extends State<SettingsPage> {
             SettingsItem(
               icon: Assets.icons.settingLock,
               title: 'Maxfiy parolni o’zgartirish',
-              onTap: () {},
+              onTap: () => _showDialog(SettingsEnum.changePassword),
             ),
             SettingsItem(
               icon: Assets.icons.userOctagon,
               title: 'Ma’lumotlarni o’zgartirish',
-              onTap: () {},
+              onTap: () => _showDialog(SettingsEnum.changeInfo),
             ),
             SettingsItem(
               icon: Assets.icons.monitorMobile,
               title: 'IPni o’zgartirish',
-              onTap: () {},
+              onTap: () => _showDialog(SettingsEnum.chamgeIP),
             ),
             SettingsItem(
               icon: Assets.icons.translate,
               title: 'Til o’zgartirish',
-              onTap: () {},
+              onTap: () => _showDialog(SettingsEnum.changeLanguage),
             ),
             SettingsItem(
               icon: Assets.icons.infoCircle,
               title: 'Dastur haqida',
-              onTap: () {},
+              onTap: () => _showDialog(SettingsEnum.about),
             ),
           ],
         ),
@@ -69,136 +114,7 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 }
 
-class SettingsAppBar extends StatelessWidget {
-  const SettingsAppBar({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.maxFinite,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SplashButton(
-            onTap: () {},
-            child: SvgPicture.asset(Assets.icons.arrowLeft2),
-          ),
-          Text("Sozlamalar", style: AppTextStyles.body16w5),
-          SplashButton(
-            onTap: () {},
-            child: SvgPicture.asset(Assets.icons.logout),
-          ),
-        ],
-      ),
-    );
-  }
-}
 
-class SettingsItem extends StatelessWidget {
-  const SettingsItem({
-    super.key,
-    required this.onTap,
-    required this.icon,
-    required this.title,
-  });
 
-  final Function() onTap;
-  final String icon;
-  final String title;
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(bottom: 12.h),
-      child: SplashButton(
-        onTap: () {
-          showDialog(
-            context: context,
-            barrierColor: AppColors.green.withOpacity(.4),
-            builder: (context) => BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
-              child: Center(
-                child: Material(
-                  color: Colors.transparent,
-                  child: Container(
-                    height: 378.h,
-                    width: double.maxFinite,
-                    margin: EdgeInsets.symmetric(horizontal: 30.w),
-                    padding: EdgeInsets.all(22.w).copyWith(bottom: 27.h),
-                    decoration: BoxDecoration(
-                      color: AppColors.accentColor,
-                      borderRadius: BorderRadius.circular(22.r),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            SvgPicture.asset(Assets.icons.settingLock),
-                            SizedBox(width: 12.w),
-                            Text("Maxfiy parolni o’zgartirish", style: AppTextStyles.body16w5),
-                          ],
-                        ),
-                        const SettingsTextField(hintText: "Avvalgi parolni kiriting"),
-                        const SettingsTextField(hintText: "Avvalgi parolni qaytadan kiriting"),
-                        const SettingsTextField(hintText: "Yangi parolni kiriting"),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          );
-        },
-        borderRadius: 22.r,
-        child: Container(
-          height: 80.h,
-          width: double.maxFinite,
-          padding: EdgeInsets.only(left: 25.w),
-          decoration: BoxDecoration(
-            color: AppColors.freePlaceGrid,
-            borderRadius: BorderRadius.circular(22.r),
-          ),
-          child: Row(
-            children: [
-              SvgPicture.asset(icon),
-              SizedBox(width: 21.w),
-              Text(title, style: AppTextStyles.body16w5),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class SettingsTextField extends StatelessWidget {
-  const SettingsTextField({
-    super.key,
-    required this.hintText,
-  });
-  final String hintText;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 57.h,
-      width: double.maxFinite,
-      padding: EdgeInsets.symmetric(horizontal: 22.w),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15.r),
-        border: Border.all(color: AppColors.borderColor),
-      ),
-      child: TextField(
-        decoration: InputDecoration(
-          hintText: hintText,
-          hintStyle: AppTextStyles.body14w5.copyWith(
-            color: AppColors.hintColor,
-          ),
-          enabledBorder: InputBorder.none,
-          focusedBorder: InputBorder.none,
-        ),
-      ),
-    );
-  }
-}
