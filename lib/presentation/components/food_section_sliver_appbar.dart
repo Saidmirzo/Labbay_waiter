@@ -22,9 +22,7 @@ class FoodSectionSliverAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      snap: true,
       pinned: true,
-      floating: true,
       automaticallyImplyLeading: false,
       backgroundColor: AppColors.accentColor,
       surfaceTintColor: AppColors.accentColor,

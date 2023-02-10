@@ -71,8 +71,6 @@ class _HomePageState extends State<HomePage> {
             ),
             SliverAppBar(
               pinned: true,
-              snap: true,
-              floating: true,
               backgroundColor: AppColors.accentColor,
               surfaceTintColor: AppColors.accentColor,
               elevation: 0,

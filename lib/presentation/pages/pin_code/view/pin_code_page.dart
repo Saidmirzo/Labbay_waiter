@@ -86,7 +86,7 @@ class _PinCodePageState extends State<PinCodePage> {
                     ),
                     CutomNumberButton(text: '0', onTap: () => funcNumber(0)),
                     InkWell(
-                      onTap: () {},
+                      onTap: () => funcDelete(),
                       child: SvgPicture.asset(Assets.icons.arrowLeft),
                     )
                   ],
@@ -115,6 +115,14 @@ class _PinCodePageState extends State<PinCodePage> {
     });
     if (number.length == 4) {
       Navigator.pushReplacementNamed(context, Routes.mainPage);
+    }
+  }
+
+  funcDelete() {
+    if (number.isNotEmpty) {
+      setState(() {
+        number = number.substring(0, number.length - 1);
+      });
     }
   }
 }
