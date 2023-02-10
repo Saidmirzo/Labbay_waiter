@@ -25,7 +25,7 @@ class SettingsTextField extends StatelessWidget {
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: AppTextStyles.body14w5.copyWith(
-            color: AppColors.hintColor,
+            color: AppColors.hintColor.withOpacity(.3),
           ),
           enabledBorder: InputBorder.none,
           focusedBorder: InputBorder.none,

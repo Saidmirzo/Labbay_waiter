@@ -29,7 +29,7 @@ class ChangeIp extends StatelessWidget {
         children: [
           Row(
             children: [
-              SvgPicture.asset(Assets.icons.userOctagon),
+              SvgPicture.asset(Assets.icons.monitorMobile),
               SizedBox(width: 12.w),
               Text("IPni sozlash", style: AppTextStyles.body16w5),
             ],

@@ -29,7 +29,7 @@ class ChangeInfo extends StatelessWidget {
         children: [
           Row(
             children: [
-              SvgPicture.asset(Assets.icons.settingLock),
+              SvgPicture.asset(Assets.icons.userOctagon),
               SizedBox(width: 12.w),
               Text("Ma’lumotlarni o’zgartirish", style: AppTextStyles.body16w5),
             ],
@@ -57,4 +57,3 @@ class ChangeInfo extends StatelessWidget {
     );
   }
 }
-
