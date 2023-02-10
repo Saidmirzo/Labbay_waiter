@@ -51,6 +51,18 @@ class _Icons extends _AssetsHolder {
   String get star => "$basePath/ic_star.svg";
   
   String get shoppingCart => "$basePath/ic_shopping_cart.svg";
+
+  String get logout => "$basePath/ic_logout.svg";
+
+  String get settingLock => "$basePath/ic_settings_lock.svg";
+
+  String get userOctagon => "$basePath/ic_user_octagon.svg";
+  
+  String get translate => "$basePath/ic_translate.svg";
+  
+  String get monitorMobile => "$basePath/ic_monitor_mobile.svg";
+
+  String get infoCircle => "$basePath/ic_info_circle.svg";
  
   
 }
