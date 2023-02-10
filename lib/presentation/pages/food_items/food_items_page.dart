@@ -62,6 +62,7 @@ class _FoodItemsPageState extends State<FoodItemsPage> {
                     onTap: () {
                       showDialog(
                         context: context,
+                        barrierColor: AppColors.green.withOpacity(.37),
                         builder: (context) => const FoodAboutMessage(),
                       );
                     },

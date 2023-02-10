@@ -22,6 +22,8 @@ abstract class AppColors {
   static const Color dottedColor =  Color(0xffF0F1FF);
   static const Color darkYellow =  Color(0xffFFE175);
   static const Color red =  Color(0xffF63C3C);
+  static const Color indicatorColor =  Color(0xff4FEDA5);
+  static const Color inActiveColor =  Color(0xffA1F8CF);
 
   static  Color shadowColor2 = const  Color(0xff5A6CEA).withOpacity(.1);
   static  Color shadowColor3 = const  Color(0xff5A6CEA).withOpacity(.07);

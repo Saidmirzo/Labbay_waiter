@@ -64,57 +64,49 @@ class _SettingsPageState extends State<SettingsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: Container(
-        padding: EdgeInsets.only(left: 30.w, right: 30.w, top: 62.h),
-        decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage(Assets.images.regBg)),
-        ),
-        child: Column(
-          children: [
-            const SettingsAppBar(),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 48.h),
-              child: Text(
-                username,
-                style: AppTextStyles.head32w8.copyWith(color: AppColors.green),
-                textAlign: TextAlign.center,
-              ),
+    return Container(
+      padding: EdgeInsets.only(left: 30.w, right: 30.w, top: 62.h),
+      decoration: BoxDecoration(
+        image: DecorationImage(image: AssetImage(Assets.images.regBg)),
+      ),
+      child: Column(
+        children: [
+          const SettingsAppBar(),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 48.h),
+            child: Text(
+              username,
+              style: AppTextStyles.head32w8.copyWith(color: AppColors.green),
+              textAlign: TextAlign.center,
             ),
-            SettingsItem(
-              icon: Assets.icons.settingLock,
-              title: 'Maxfiy parolni o’zgartirish',
-              onTap: () => _showDialog(SettingsEnum.changePassword),
-            ),
-            SettingsItem(
-              icon: Assets.icons.userOctagon,
-              title: 'Ma’lumotlarni o’zgartirish',
-              onTap: () => _showDialog(SettingsEnum.changeInfo),
-            ),
-            SettingsItem(
-              icon: Assets.icons.monitorMobile,
-              title: 'IPni o’zgartirish',
-              onTap: () => _showDialog(SettingsEnum.chamgeIP),
-            ),
-            SettingsItem(
-              icon: Assets.icons.translate,
-              title: 'Til o’zgartirish',
-              onTap: () => _showDialog(SettingsEnum.changeLanguage),
-            ),
-            SettingsItem(
-              icon: Assets.icons.infoCircle,
-              title: 'Dastur haqida',
-              onTap: () => _showDialog(SettingsEnum.about),
-            ),
-          ],
-        ),
+          ),
+          SettingsItem(
+            icon: Assets.icons.settingLock,
+            title: 'Maxfiy parolni o’zgartirish',
+            onTap: () => _showDialog(SettingsEnum.changePassword),
+          ),
+          SettingsItem(
+            icon: Assets.icons.userOctagon,
+            title: 'Ma’lumotlarni o’zgartirish',
+            onTap: () => _showDialog(SettingsEnum.changeInfo),
+          ),
+          SettingsItem(
+            icon: Assets.icons.monitorMobile,
+            title: 'IPni o’zgartirish',
+            onTap: () => _showDialog(SettingsEnum.chamgeIP),
+          ),
+          SettingsItem(
+            icon: Assets.icons.translate,
+            title: 'Til o’zgartirish',
+            onTap: () => _showDialog(SettingsEnum.changeLanguage),
+          ),
+          SettingsItem(
+            icon: Assets.icons.infoCircle,
+            title: 'Dastur haqida',
+            onTap: () => _showDialog(SettingsEnum.about),
+          ),
+        ],
       ),
     );
   }
 }
-
-
-
-
-

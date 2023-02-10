@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:labbay_waiter/presentation/components/empty_bottom.dart';
 import 'package:labbay_waiter/presentation/components/splash_button.dart';
+import 'package:labbay_waiter/presentation/routes/routes.dart';
 
 import '../../config/constants/app_colors.dart';
 import '../../config/constants/app_text_styles.dart';
@@ -69,7 +70,7 @@ class FoodSectionSliverAppBar extends StatelessWidget {
             ),
           ),
           SplashButton(
-            onTap: () {},
+            onTap: () => Navigator.pushNamed(context, Routes.basketPage),
             child: Container(
               width: 50.h,
               height: 50.h,

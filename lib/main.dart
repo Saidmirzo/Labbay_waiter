@@ -9,7 +9,7 @@ void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(const MyApp());
-   FlutterNativeSplash.remove();
+  FlutterNativeSplash.remove();
 }
 
 class MyApp extends StatelessWidget {
@@ -24,8 +24,9 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           theme: ThemeData(
-              useMaterial3: true,
-              scaffoldBackgroundColor: AppColors.accentColor),
+            useMaterial3: true,
+            scaffoldBackgroundColor: AppColors.accentColor,
+          ),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: (settings) => Routes.generateRoute(settings),
         );

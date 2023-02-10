@@ -67,6 +67,12 @@ class _Icons extends _AssetsHolder {
   String get checkbox => "$basePath/ic_checkbox.svg";
 
   String get delete => "$basePath/trash.svg";
+
+  String get home => "$basePath/home.svg";
+
+  String get clock => "$basePath/clock.svg";
+
+  String get setting => "$basePath/setting.svg";
  
   
 }

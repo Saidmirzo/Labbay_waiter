@@ -4,15 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:labbay_waiter/config/constants/app_colors.dart';
-import 'package:labbay_waiter/config/constants/app_decorations.dart';
 import 'package:labbay_waiter/config/constants/app_text_styles.dart';
 import 'package:labbay_waiter/config/constants/assets.dart';
 
 import '../components/comment_row.dart';
 import '../components/count_row_widget.dart';
 import '../components/custom_confirmation_page.dart';
-import '../components/custom_text_button.dart';
-import '../components/plus_minus_button.dart';
 import '../components/voume_row.dart';
 
 class FoodAboutMessage extends StatelessWidget {
@@ -20,18 +17,14 @@ class FoodAboutMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BackdropFilter(
+    return Material(
+      color: Colors.transparent,
+      child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-        child: Container(
-          color: AppColors.buttonColor.withOpacity(.37),
-          padding: EdgeInsets.only(
-            right: 18.w,
-            left: 18.w,
-            top: 20.h,
-            bottom: 52.h,
-          ),
+        child: Center(
           child: Container(
+            height: 655.h,
+            margin: EdgeInsets.symmetric(horizontal: 17.w),
             decoration: BoxDecoration(
               color: AppColors.accentColor,
               borderRadius: BorderRadius.circular(22.r),
@@ -98,7 +91,10 @@ class FoodAboutMessage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CustomConfirmationButton(text: 'Qaytish', onTap: () {}),
+                    CustomConfirmationButton(
+                      text: 'Qaytish',
+                      onTap: () => Navigator.pop(context),
+                    ),
                     SizedBox(width: 12.w),
                     CustomConfirmationButton(
                       text: 'Yakunlash',
